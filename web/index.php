@@ -6,17 +6,16 @@ $loader = include __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
 
-
 $app->get('/', function () use ($app) {
-    return 'index';
+    return $app['twig']->render('index.twig');
 });
 
 $app->get('/critical', function () use ($app) {
-    return 'processed';
+    return $app['twig']->render('critical.twig');
 });
 
 $app->get('/reference', function () use ($app) {
-    return 'reference';
+    return $app['twig']->render('reference.twig');
 });
 
 $app->run();
