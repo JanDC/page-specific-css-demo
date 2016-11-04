@@ -1,6 +1,4 @@
-application: page-specific-css-demo
-version: 1
-runtime: php7
+runtime: php55
 api_version: 1
 
 handlers:
