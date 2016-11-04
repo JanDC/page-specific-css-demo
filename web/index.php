@@ -2,7 +2,7 @@
 
 use Silex\Application;
 
-$loader = include __DIR__ . '../vendor/autoload.php';
+$loader = include __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
 
