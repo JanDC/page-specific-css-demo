@@ -5,6 +5,7 @@ use Silex\Application;
 $loader = include __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
+$app['debug'] = true;
 
 $app->get('/', function () use ($app) {
     return $app['twig']->render('index.twig');
