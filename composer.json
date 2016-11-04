@@ -3,7 +3,8 @@
     "type": "website",
     "require": {
         "silex/silex": "1.2",
-        "jandc/twig-wrapper-provider": "dev-master"
+        "jandc/twig-wrapper-provider": "dev-master",
+        "symfony/twig-bridge": "^3.1"
     },
     "authors": [
         {
