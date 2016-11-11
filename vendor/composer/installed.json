@@ -671,89 +671,6 @@
         "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles"
     },
     {
-        "name": "jandc/page-specific-css",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/JanDC/page-specific-css.git",
-            "reference": "0d2819b6051c26920e6cbcb22c5aab4a8d7e3c10"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/JanDC/page-specific-css/zipball/0d2819b6051c26920e6cbcb22c5aab4a8d7e3c10",
-            "reference": "0d2819b6051c26920e6cbcb22c5aab4a8d7e3c10",
-            "shasum": ""
-        },
-        "require": {
-            "tijsverkoyen/css-to-inline-styles": "^2.2",
-            "twig/twig": "^1.26"
-        },
-        "time": "2016-10-27 15:05:16",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "PageSpecificCss\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "ISC"
-        ],
-        "authors": [
-            {
-                "name": "Jan Decavele",
-                "email": "jan.decavele@gmail.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Php library which determines critical css on a per page basis.",
-        "homepage": "https://github.com/JanDC/page-specific-css"
-    },
-    {
-        "name": "jandc/twig-wrapper-provider",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/JanDC/twig-wrapper-provider.git",
-            "reference": "d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/JanDC/twig-wrapper-provider/zipball/d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe",
-            "reference": "d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe",
-            "shasum": ""
-        },
-        "require": {
-            "jandc/page-specific-css": "dev-master",
-            "silex/silex": ">=1.2,<2.0",
-            "twig/twig": "^1.26"
-        },
-        "time": "2016-10-27 17:41:04",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "TwigWrapperProvider\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "ISC"
-        ],
-        "authors": [
-            {
-                "name": "Jan Decavele",
-                "email": "jan.decavele@gmail.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Silex provider which wraps twig rendering and allows for post processing",
-        "homepage": "https://github.com/JanDC/twig-wrapper-provider"
-    },
-    {
         "name": "symfony/twig-bridge",
         "version": "v3.1.6",
         "version_normalized": "3.1.6.0",
@@ -835,5 +752,88 @@
         ],
         "description": "Symfony Twig Bridge",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "jandc/page-specific-css",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/JanDC/page-specific-css.git",
+            "reference": "0d2819b6051c26920e6cbcb22c5aab4a8d7e3c10"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/JanDC/page-specific-css/zipball/0d2819b6051c26920e6cbcb22c5aab4a8d7e3c10",
+            "reference": "0d2819b6051c26920e6cbcb22c5aab4a8d7e3c10",
+            "shasum": ""
+        },
+        "require": {
+            "tijsverkoyen/css-to-inline-styles": "^2.2",
+            "twig/twig": "^1.26"
+        },
+        "time": "2016-10-27 15:05:16",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "PageSpecificCss\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "ISC"
+        ],
+        "authors": [
+            {
+                "name": "Jan Decavele",
+                "email": "jan.decavele@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Php library which determines critical css on a per page basis.",
+        "homepage": "https://github.com/JanDC/page-specific-css"
+    },
+    {
+        "name": "jandc/twig-wrapper-provider",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/JanDC/twig-wrapper-provider.git",
+            "reference": "d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/JanDC/twig-wrapper-provider/zipball/d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe",
+            "reference": "d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe",
+            "shasum": ""
+        },
+        "require": {
+            "jandc/page-specific-css": "dev-master",
+            "silex/silex": ">=1.2,<2.0",
+            "twig/twig": "^1.26"
+        },
+        "time": "2016-10-27 17:41:04",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "TwigWrapperProvider\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "ISC"
+        ],
+        "authors": [
+            {
+                "name": "Jan Decavele",
+                "email": "jan.decavele@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Silex provider which wraps twig rendering and allows for post processing",
+        "homepage": "https://github.com/JanDC/twig-wrapper-provider"
     }
 ]
