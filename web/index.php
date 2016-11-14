@@ -16,7 +16,7 @@ $app = new Application();
 $debug = true;
 $cacheTtl = 3600;
 
-$fs_prefix = file_get_contents('gs:/' . __DIR__ . 'index.php') ? 'gs:/' : '';
+$fs_prefix = file_get_contents('gs://page-specific-css-demo' . __DIR__ . 'index.php') ? 'gs://page-specific-css-demo' : '';
 
 $app->register(new HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => $fs_prefix . __DIR__ . '/../cache/http_cache',
