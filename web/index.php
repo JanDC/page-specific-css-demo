@@ -1,5 +1,6 @@
 <?php
 
+use PageSpecificCss\Twig\Extension;
 use Silex\Application;
 use Silex\Provider\TwigServiceProvider;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,6 +20,13 @@ $app->register(new TwigServiceProvider(), [
         'debug' => $debug,
     ]
 ]);
+
+$app['twig'] = $app->share($app->extend('twig', function (Twig_Environment $twig, $app) {
+    $twig->addExtension(new Extension(__DIR__. '/css/main.css'));
+    return $twig;
+}
+));
+
 $app->register(new TwigWrapperProvider('twig', [new CriticalCssProcessor()]));
 
 $app['debug'] = $debug;
