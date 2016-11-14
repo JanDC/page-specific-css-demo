@@ -1,9 +1,7 @@
 <?php
 
-
 use PageSpecificCss\Twig\Extension;
 use Silex\Application;
-use Silex\Provider\HttpCacheServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Symfony\Component\HttpFoundation\Response;
 use TwigWrapperProvider\Processors\CriticalCssProcessor;
