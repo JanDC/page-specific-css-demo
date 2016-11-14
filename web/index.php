@@ -16,17 +16,10 @@ $app = new Application();
 $debug = true;
 $cacheTtl = 3600;
 
-$fs_prefix = file_get_contents('gs://page-specific-css-demo.appspot.com/') ? 'gs://page-specific-css-demo.appspot.com' : '';
-
-$app->register(new HttpCacheServiceProvider(), array(
-    'http_cache.cache_dir' => $fs_prefix . '/cache/http_cache',
-));
-
 $app->register(new TwigServiceProvider(), [
     'twig.path' => [__DIR__ . '/views', __DIR__ . '/node_modules'],
     'twig.options' => [
-        'debug' => $debug,
-        'cache' => $fs_prefix . __DIR__ . 'cache/twig_cache'
+        'debug' => $debug
     ]
 ]);
 
@@ -52,4 +45,4 @@ $app->get('/reference', function () use ($app, $cacheTtl) {
     return Response::create($app['twig']->render('reference.twig'))->setTtl($cacheTtl);
 });
 
-$app['http_cache']->run();
+$app->run();
