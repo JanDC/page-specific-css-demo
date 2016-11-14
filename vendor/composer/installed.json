@@ -755,8 +755,8 @@
     },
     {
         "name": "jandc/page-specific-css",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "0.1",
+        "version_normalized": "0.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/JanDC/page-specific-css.git",
@@ -774,7 +774,7 @@
         },
         "time": "2016-10-27 15:05:16",
         "type": "library",
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "PageSpecificCss\\": "src/"
@@ -796,27 +796,27 @@
     },
     {
         "name": "jandc/twig-wrapper-provider",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "0.1.1",
+        "version_normalized": "0.1.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/JanDC/twig-wrapper-provider.git",
-            "reference": "d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe"
+            "reference": "306933c58c3a6573fd1cbfac6208fdb14c1346d1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/JanDC/twig-wrapper-provider/zipball/d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe",
-            "reference": "d0ecfd167544e589626c1b8f4b7ca03f04c8c2fe",
+            "url": "https://api.github.com/repos/JanDC/twig-wrapper-provider/zipball/306933c58c3a6573fd1cbfac6208fdb14c1346d1",
+            "reference": "306933c58c3a6573fd1cbfac6208fdb14c1346d1",
             "shasum": ""
         },
         "require": {
-            "jandc/page-specific-css": "dev-master",
+            "jandc/page-specific-css": "0.1",
             "silex/silex": ">=1.2,<2.0",
             "twig/twig": "^1.26"
         },
-        "time": "2016-10-27 17:41:04",
+        "time": "2016-11-14 09:01:05",
         "type": "library",
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "TwigWrapperProvider\\": "src/"

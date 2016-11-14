@@ -28,7 +28,7 @@ $app->get('/', function () use ($app, $cacheTtl) {
 });
 
 $app->get('/critical', function () use ($app,$cacheTtl) {
-    return Response::create($app['twig']->render('critical.twig'));
+    return Response::create($app['twigwrapper']->render('critical.twig'));
 });
 
 $app->get('/reference', function () use ($app,$cacheTtl) {
