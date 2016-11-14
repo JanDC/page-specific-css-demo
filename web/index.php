@@ -16,7 +16,7 @@ $app = new Application();
 $debug = true;
 $cacheTtl = 3600;
 
-$fs_prefix = file_get_contents('gs://page-specific-css-demo/web/index.php') ? 'gs://page-specific-css-demo' : '';
+$fs_prefix = file_get_contents('gs://page-specific-css-demo.appspot.com/web/index.php') ? 'gs://page-specific-css-demo.appspot.com' : '';
 
 $app->register(new HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => $fs_prefix . '/cache/http_cache',
