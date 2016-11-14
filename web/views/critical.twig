@@ -1,17 +1,17 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-    {% block fold %}
-        <h1>Critical css page</h1>
+    {% fold %}
+    <h1>Critical css page</h1>
 
-        <p class="red-box">
-            Critical red box
-        </p>
-    {% endblock fold %}
+    <p class="red-box">
+        Critical red box
+    </p>
+    {% endfold %}
 
-    <a href="/">Home</a>
     <p class="blue-box">
         Not so critical blue box
     </p>
+    <a href="/">Home</a>
 
 {% endblock content %}

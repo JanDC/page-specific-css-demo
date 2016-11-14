@@ -1,6 +1,16 @@
+<!DOCTYPE html >
 <html>
 <head>
-
+    <script>
+        {% include 'fg-loadcss/src/loadCSS.js' %}
+    </script>
+    <script id="loadcss">
+        // load a CSS file just before the script element containing this code
+        loadCSS("../css/main.css", document.getElementById("loadcss"));
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="../css/main.css" type="text/css">
+    </noscript>
 </head>
 <body>
 {% block content %}{% endblock %}
