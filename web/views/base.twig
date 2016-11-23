@@ -5,13 +5,8 @@
     <script>
         {% include 'fg-loadcss/src/loadCSS.js' %}
     </script>
-    <script id="loadcss">
-        // load a CSS file just before the script element containing this code
-        loadCSS("../css/main.css", document.getElementById("loadcss"));
-    </script>
-    <noscript>
-        <link rel="stylesheet" href="../css/main.css" type="text/css">
-    </noscript>
+    <link rel="preload" href="/css/main.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
 </head>
 <body>
 {% block content %}{% endblock %}

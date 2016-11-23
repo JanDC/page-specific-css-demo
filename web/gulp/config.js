@@ -2,8 +2,7 @@
  * Config file
  */
 var path = './';
-var styleguidePath = path + 'styleguide/';
-var domain = 'replaceme.dev';
+var domain = 'page-specific.dev';
 
 module.exports = {
 
@@ -11,8 +10,8 @@ module.exports = {
    * Scss settings
    */
   scss: {
-    src: path + 'src/main.scss',
-    glob: path + 'src/**/*.scss',
+    src: path + 'scss/main.scss',
+    glob: path + 'scss/**/*.scss',
     settings: {
       outputStyle: 'expanded'
     },
@@ -89,22 +88,5 @@ module.exports = {
   browsersync: {
     proxy: domain,
     notify: false
-  },
-
-  /**
-   * Styleguide settings
-   */
-  styleguide: {
-    path: styleguidePath,
-    files: [styleguidePath + '**/*.html', styleguidePath + '**/*.liquid', '!' + styleguidePath + '_site/**/*'],
-    dest: styleguidePath + 'css/',
-    jekyllDest: styleguidePath + '_site/css/',
-    scss: {
-      src: styleguidePath + 'src/**/*.scss',
-      settings: {
-        outputStyle: 'compressed'
-      },
-      dest: styleguidePath + 'css/'
-    }
   }
 };

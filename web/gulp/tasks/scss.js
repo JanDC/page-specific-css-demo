@@ -50,7 +50,5 @@ gulp.task('scss', ["lint-styles"], function () {
     .pipe(cssnano({autoprefixer: false}))
     .pipe(sourcemaps.write('.'))
     .pipe(browserSync.stream({match: '**/*.css'}))
-    .pipe(gulp.dest(config.styleguide.dest))
-    .pipe(gulp.dest(config.styleguide.jekyllDest))
     .pipe(gulp.dest(config.scss.dest))
 });
