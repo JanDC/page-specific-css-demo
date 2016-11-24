@@ -1,0 +1,37 @@
+/*
+ *  Components: Menu
+ *  ---
+ */
+
+.c-menu{
+  margin-top: double($global-spacing-unit-large);
+  position: relative;
+  display: inline-block;
+  padding-top: $global-spacing-unit;
+  ul{
+    position: relative;
+    z-index: index(beta);
+    color: white;
+    a{
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      padding: $global-spacing-unit-tiny 0;
+      
+      &:hover{
+        opacity:.6;
+      }
+    }
+  }
+}
+
+.c-menu-bg {
+  width: 1340px;
+  height: 900px;
+  position: absolute;
+  z-index: index(alpha);
+  top: 0;
+  right: 0;
+  transform-origin: top right;
+  transform: rotate(-15deg) translateX(-10%) translateY(-17%);
+}

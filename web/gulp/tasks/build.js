@@ -9,6 +9,7 @@ var gulp = require('gulp');
  * Tasks
  */
 gulp.task('build', [
-  'svg',
-  'src',
+    'svg',
+    'svg-sprite',
+    'src',
 ]);

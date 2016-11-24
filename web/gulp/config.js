@@ -2,7 +2,7 @@
  * Config file
  */
 var path = './';
-var domain = 'page-specific.dev';
+var domain = 'page-specific-css.dev';
 
 module.exports = {
 
@@ -79,7 +79,8 @@ module.exports = {
         }
       }
     },
-    src: path + 'images/src/svg/**/*.svg'
+    src: path + 'images/src/svg/**/*.svg',
+    dest: path + 'images/dest/svg/'
   },
 
   /**

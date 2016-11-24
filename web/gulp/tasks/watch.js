@@ -15,10 +15,13 @@ var config = require('../config');
  * Tasks
  */
 gulp.task('watch', ['default', 'browsersync'], function () {
-  watch(config.scss.glob, function (event) {
+  watch(config.scss.glob, function () {
     gulp.start('scss');
   });
-  watch(config.svg.src, function (event) {
-    gulp.start('svg');
-  });
+    watch(config.svg.svgsprite.src, function () {
+        gulp.start('svg-sprite');
+    });
+    watch(config.svg.src, function () {
+        gulp.start('svg');
+    });
 });

@@ -1,0 +1,28 @@
+/*
+ *  Object: Basic layout
+ *  ---
+ */
+
+.o-basic-layout{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 10rem;
+  overflow: hidden;
+  position: relative;
+
+  aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 30%;
+
+    nav{
+      flex: 0 1 1%;
+      align-items: flex-end;
+    }
+  }
+
+  main{
+    flex: 0 1 600px;
+  }
+}

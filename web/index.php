@@ -15,7 +15,7 @@ $debug = true;
 $cacheTtl = 3600;
 
 $app->register(new TwigServiceProvider(), [
-    'twig.path' => [__DIR__ . '/views', __DIR__ . '/node_modules'],
+    'twig.path' => [__DIR__ . '/views', __DIR__],
     'twig.options' => [
         'debug' => $debug
     ]
@@ -33,14 +33,6 @@ $app['debug'] = $debug;
 
 $app->get('/', function () use ($app, $cacheTtl) {
     return Response::create($app['twig']->render('index.twig'))->setTtl($cacheTtl);
-});
-
-$app->get('/critical', function () use ($app, $cacheTtl) {
-    return Response::create($app['twigwrapper']->render('critical.twig'))->setTtl($cacheTtl);
-});
-
-$app->get('/reference', function () use ($app, $cacheTtl) {
-    return Response::create($app['twig']->render('reference.twig'))->setTtl($cacheTtl);
 });
 
 $app->run();

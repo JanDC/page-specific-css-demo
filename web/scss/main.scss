@@ -42,6 +42,7 @@
 @import "../node_modules/itr-base-theme-css/objects/objects.gutter";
 @import "../node_modules/itr-base-theme-css/objects/objects.list";
 @import "../node_modules/itr-base-theme-css/objects/objects.list-inline";
+@import "objects/objects.basic-layout";
 /*
  * Components
  * Specific UI components. This is where majority of our work takes place and
@@ -49,11 +50,14 @@
  */
 @import "components/components.buttons";
 @import "components/components.header";
+@import "components/components.logo";
+@import "components/components.menu";
 /*
  * Bootstrap grid
  * Grid that can be used within the project
  */
 @import "../node_modules/itr-base-theme-css/vendor/vendor.bootstrap";
+@import "vendor/vendor.prism-white";
 /*
  * Utilities
  * Utilities and helper classes with ability to override anything which goes
