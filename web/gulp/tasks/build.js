@@ -11,5 +11,5 @@ var gulp = require('gulp');
 gulp.task('build', [
     'svg',
     'svg-sprite',
-    'src',
+    'scss',
 ]);
