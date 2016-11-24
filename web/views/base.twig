@@ -2,9 +2,7 @@
 {% spaceless %}
 <html>
 <head>
-    <script>{% include 'js/node_modules/fg-loadcss/src/loadCSS.js' %}</script>
-    <link rel="preload" href="/css/main.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+    <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -12,6 +10,8 @@
 <body class="u-flex-set">
 {% block content %}{% endblock %}
 </body>
-<script src="/js/prismjs/prism.js"></script>
+<script defer src="/js/prismjs/prism.js"></script>
+<script defer src="/js/node_modules/animateplus/animate.js"></script>
+<script async src="/js/modules/logo-animation.js"></script>
 </html>
 {% endspaceless %}
