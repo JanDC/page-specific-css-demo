@@ -11,9 +11,11 @@
   position: relative;
 
   aside{
+    max-height: calc(100vh - 10rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 450px;
     flex: 0 1 30%;
     padding-right: $global-spacing-unit-large;
 

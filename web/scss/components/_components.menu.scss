@@ -41,5 +41,10 @@
   transform-origin: top right;
   transform: rotate(-15deg) translateX(-10%) translateY(-17%);
   opacity: 0;
-  animation: 1s 1.4s fadeIn forwards;
+}
+
+.c-menu-bg-parallax{
+  position: absolute;
+  right: 0;
+  top: 0;
 }

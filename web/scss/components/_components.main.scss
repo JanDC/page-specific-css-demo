@@ -4,6 +4,7 @@
  */
 
 .c-main {
-  opacity: 0;
-  animation: 1s 1.4s fadeIn forwards;
+  > *{
+    opacity: 0;
+  }
 }

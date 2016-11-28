@@ -20,6 +20,7 @@ $palettes: (
         color-base: (
                 x-light : hsl(hue($color-base), 0, 100),
                 light : hsl(hue($color-base), 0, 90),
+                medium : hsl(hue($color-base), 0, 70),
                 base : $color-base,
                 dark : hsl(hue($color-base), 0, 0)
         ),
