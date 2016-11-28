@@ -1,30 +1,34 @@
 <?php
 
+use CriticalCssProcessor\CriticalCssProcessor;
 use PageSpecificCss\Twig\Extension;
 use Silex\Application;
+use Silex\Provider\HttpCacheServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Symfony\Component\HttpFoundation\Response;
-use TwigWrapperProvider\Processors\CriticalCssProcessor;
 use TwigWrapperProvider\TwigWrapperProvider;
 
 $loader = include __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
 
-$debug = true;
+$debug = false;
 $cacheTtl = 3600;
 
 $app->register(new TwigServiceProvider(), [
     'twig.path' => [__DIR__ . '/views', __DIR__],
     'twig.options' => [
-        'debug' => $debug
+        'debug' => $debug,
+        'cache' => __DIR__ . '/../cache/twig_cache'
     ]
 ]);
+
+$app->register(new HttpCacheServiceProvider(), ['http_cache.cache_dir' => __DIR__ . '/../cache/http_cache']);
 
 $app->register(new TwigWrapperProvider('twig', [new CriticalCssProcessor()]));
 
 $app->extend('twig', function (Twig_Environment $twig, $app) {
-    $twig->addExtension(new Extension(__DIR__ . '/css/main.css'));
+    $twig->addExtension(new Extension());
     return $twig;
 });
 
@@ -32,7 +36,9 @@ $app->extend('twig', function (Twig_Environment $twig, $app) {
 $app['debug'] = $debug;
 
 $app->get('/', function () use ($app, $cacheTtl) {
-    return Response::create($app['twig']->render('index.twig'))->setTtl($cacheTtl);
+    return Response::create($app['twigwrapper']->render('index.twig'))->setTtl($cacheTtl);
 });
-
-$app->run();
+if ($debug) {
+    $app->run();
+}
+$app['http_cache']->run();

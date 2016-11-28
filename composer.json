@@ -3,7 +3,7 @@
     "type": "website",
     "require": {
         "silex/silex": "1.2",
-        "jandc/twig-wrapper-provider": "^0.1"
+        "jandc/critical-css-processor": "dev-master"
     },
     "authors": [
         {
@@ -11,5 +11,5 @@
             "email": "jandecavele@gmail.com"
         }
     ],
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }
