@@ -12,7 +12,7 @@ $loader = include __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
 
-$debug = false;
+$debug = true;
 $cacheTtl = 3600;
 
 $app->register(new TwigServiceProvider(), [
