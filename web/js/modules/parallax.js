@@ -1,10 +1,12 @@
 /**
  * Main carousel slider
  */
-(function () {
-    const parallax = (function () {
+(function ($) {
+    window.parallax = function () {
 
         let ticking;
+        let instance = 0;
+        let params = [];
 
         /**
          * Swiper options
@@ -17,14 +19,33 @@
 
             init: function () {
                 document.querySelectorAll(options.selector).forEach(function (item) {
+                    item.setAttribute('data-parallax-instance', instance);
+                    item.classList.add('is-parallaxing');
+
+                    params.push({});
+
                     app.updatePosition(item);
-                    document.addEventListener('scroll', app.tick)
+                    document.addEventListener('scroll', function () {
+                        app.tick(item);
+                    });
+                    instance++;
                 })
+            },
+
+            getParams: function (id) {
+                return params[id];
+            },
+
+            destroy: function () {
+                document.removeEventListener('scroll', app.tick);
+                return 'removed parallax';
             },
 
             tick: function (element) {
                 if (ticking) return;
-                requestAnimationFrame(app.updatePosition);
+                window.requestAnimationFrame(function () {
+                    app.updatePosition(element)
+                });
                 ticking = true;
             },
 
@@ -51,20 +72,24 @@
              *
              * @param element
              */
-            updatePosition: function () {
-                document.querySelectorAll(options.selector).forEach(function (element) {
-                    const transformValues = app.transformValues(element);
-                    const transformPrefixes = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTransform"];
-                    const transformProperty = getSupportedPropertyName(transformPrefixes);
+            updatePosition: function (item) {
+                const instance = item.getAttribute('data-parallax-instance');
+                let localParams = app.getParams(instance);
+                const transformValues = app.transformValues(item);
+                const transformPrefixes = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTransform"];
+                const transformProperty = getSupportedPropertyName(transformPrefixes);
 
-                    if (transformProperty) {
-                        element.style[transformProperty] = "" +
-                            "rotate(" + pof(transformValues.rotate) + "deg)" +
-                            "translateX(" + pof(transformValues.translateX) + "px)" +
-                            "translateY(" + pof(transformValues.translateY) + "px)";
-                    }
+                if (transformProperty) {
 
-                });
+                    localParams.rotate = pof(transformValues.rotate);
+                    localParams.translateX = pof(transformValues.translateX);
+                    localParams.translateY = pof(transformValues.translateX);
+
+                    item.style[transformProperty] = "" +
+                        "rotate(" + (pof(transformValues.rotate) - 15) + "deg)" +
+                        "translateX(" + (pof(transformValues.translateX) - 10) + "%)" +
+                        "translateY(" + (pof(transformValues.translateY) - 17) + "%)";
+                }
 
                 ticking = false;
             },
@@ -72,8 +97,9 @@
 
         app.init();
 
-    })();
+        return app;
 
+    };
 
     // Helpers
     /**
@@ -94,10 +120,10 @@
      * @param value
      * @returns {number}
      */
-    function pof(value){
-        if (value){
+    function pof(value) {
+        if (value) {
             return value * getScrollPercent() / 100;
-        }else{
+        } else {
             return 0;
         }
     }
@@ -116,4 +142,5 @@
         }
         return null;
     }
-}());
+
+}(jQuery));

@@ -41,11 +41,14 @@
   transform-origin: top right;
   transform: rotate(-15deg) translateX(-10%) translateY(-17%);
   opacity: 0;
+
+  &.is-parallaxing{
+    transition: 1s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+  }
 }
 
 .c-menu-bg-parallax{
   position: absolute;
   right: 0;
   top: 0;
-  transition: 1s cubic-bezier(0.03, 0.98, 0.52, 0.99);
 }

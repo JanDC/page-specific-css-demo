@@ -10,7 +10,10 @@
         translateY: ["17%", "-17%"],
         scale: [0, 1],
         opacity: [0, 1],
-        easing: "easeInOutQuint"
+        easing: "easeInOutQuint",
+        complete: function(){
+            parallax();
+        }
     });
 
 }(window));
