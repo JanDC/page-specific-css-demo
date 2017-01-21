@@ -4,26 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b63a0c8274ffb147bbe0d49bbbfb5c0",
-    "content-hash": "3400baecb8a764fbee7549b834fe1293",
+    "content-hash": "41ccc440046346c8e7b2e1712c65d12b",
     "packages": [
         {
             "name": "jandc/critical-css-processor",
-            "version": "dev-master",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/critical-css-processor.git",
-                "reference": "2034c16b64945f3679f0e67fa2cc38f5790a8f0a"
+                "reference": "03ecbc632ca42e3ddc087079a10f52b4446b86d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/critical-css-processor/zipball/2034c16b64945f3679f0e67fa2cc38f5790a8f0a",
-                "reference": "2034c16b64945f3679f0e67fa2cc38f5790a8f0a",
+                "url": "https://api.github.com/repos/JanDC/critical-css-processor/zipball/03ecbc632ca42e3ddc087079a10f52b4446b86d6",
+                "reference": "03ecbc632ca42e3ddc087079a10f52b4446b86d6",
                 "shasum": ""
             },
             "require": {
-                "jandc/page-specific-css": "dev-master",
-                "jandc/twig-wrapper-provider": "dev-master"
+                "jandc/page-specific-css": "^0.2",
+                "jandc/twig-wrapper-provider": "^0.2"
             },
             "type": "library",
             "autoload": {
@@ -42,11 +41,11 @@
                 }
             ],
             "description": "Twig postprocessor class which uses the the page-specific-css library to inject the document's head with css",
-            "time": "2016-11-28 14:02:49"
+            "time": "2017-01-21T16:55:37+00:00"
         },
         {
             "name": "jandc/page-specific-css",
-            "version": "dev-master",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/page-specific-css.git",
@@ -81,11 +80,41 @@
             ],
             "description": "Php library which determines critical css on a per page basis.",
             "homepage": "https://github.com/JanDC/page-specific-css",
-            "time": "2016-11-28 14:12:34"
+            "time": "2016-11-28T14:12:34+00:00"
+        },
+        {
+            "name": "jandc/page-specific-css-silex",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanDC/page-specific-css-silex.git",
+                "reference": "fe764d42d1c35fc5fec241f2acc5813c6e332fab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanDC/page-specific-css-silex/zipball/fe764d42d1c35fc5fec241f2acc5813c6e332fab",
+                "reference": "fe764d42d1c35fc5fec241f2acc5813c6e332fab",
+                "shasum": ""
+            },
+            "require": {
+                "jandc/critical-css-processor": "^0.2",
+                "jandc/page-specific-css": "^0.2",
+                "jandc/twig-wrapper-provider": "^0.2",
+                "silex/silex": "^1.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Jan Decavele",
+                    "email": "jandecavele@gmail.com"
+                }
+            ],
+            "time": "2017-01-21T16:53:05+00:00"
         },
         {
             "name": "jandc/twig-wrapper-provider",
-            "version": "dev-master",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/twig-wrapper-provider.git",
@@ -120,7 +149,7 @@
             ],
             "description": "Silex provider which wraps twig rendering and allows for post processing",
             "homepage": "https://github.com/JanDC/twig-wrapper-provider",
-            "time": "2016-11-24 16:48:38"
+            "time": "2016-11-24T16:48:38+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -299,7 +328,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2014-03-29 14:15:59"
+            "time": "2014-03-29T14:15:59+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -307,12 +336,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "cba91f45645e34ecd2c52203986e3015072920e8"
+                "reference": "4acd5ee3bc49332ffb60741f6f7260e018264484"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/cba91f45645e34ecd2c52203986e3015072920e8",
-                "reference": "cba91f45645e34ecd2c52203986e3015072920e8",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/4acd5ee3bc49332ffb60741f6f7260e018264484",
+                "reference": "4acd5ee3bc49332ffb60741f6f7260e018264484",
                 "shasum": ""
             },
             "require": {
@@ -352,7 +381,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-19 20:35:20"
+            "time": "2017-01-02 20:33:09"
         },
         {
             "name": "symfony/debug",
@@ -360,12 +389,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "62a68f640456f6761d752c62d81631428ef0d8a1"
+                "reference": "b58c5193eb47dc960961574970d53df13d1afcb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/62a68f640456f6761d752c62d81631428ef0d8a1",
-                "reference": "62a68f640456f6761d752c62d81631428ef0d8a1",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/b58c5193eb47dc960961574970d53df13d1afcb8",
+                "reference": "b58c5193eb47dc960961574970d53df13d1afcb8",
                 "shasum": ""
             },
             "require": {
@@ -409,7 +438,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-15 12:53:17"
+            "time": "2017-01-21 16:40:50"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -708,7 +737,7 @@
             ],
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
-            "time": "2016-09-20 12:50:39"
+            "time": "2016-09-20T12:50:39+00:00"
         },
         {
             "name": "twig/twig",
@@ -716,12 +745,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "717365d089a2f5cc767d75084f9639811881f628"
+                "reference": "a1c1f01eac45b68d6f17c3b499297b93e1a47321"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/717365d089a2f5cc767d75084f9639811881f628",
-                "reference": "717365d089a2f5cc767d75084f9639811881f628",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a1c1f01eac45b68d6f17c3b499297b93e1a47321",
+                "reference": "a1c1f01eac45b68d6f17c3b499297b93e1a47321",
                 "shasum": ""
             },
             "require": {
@@ -729,12 +758,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2@dev"
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.29-dev"
+                    "dev-master": "1.31-dev"
                 }
             },
             "autoload": {
@@ -769,15 +798,13 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-11-23 18:59:28"
+            "time": "2017-01-19 14:55:10"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "jandc/critical-css-processor": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
