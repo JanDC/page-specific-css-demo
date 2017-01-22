@@ -16,18 +16,18 @@
         <h3 id="usage">Usage</h3>
 <pre class="u-margin-bottom-none">
 <code class="language-twig">{% filter e %}
-        {{ '{% fold %}' }}
-        <button class=”your-css-class”>Button</button>
-        {{ '{% endfold %}' }}{% endfilter %}</code></pre>
+{{ '{% fold %}' }}
+    <button class=”your-css-class”>Button</button>
+{{ '{% endfold %}' }}{% endfilter %}</code></pre>
 <pre class="u-margin-top-none">
 <code class="language-markup">{% filter e('html') %}<!-- output -->
-    <head>
-        <style>
-            .your-css-class {
-                color: pink;
-            }
-        </style>
-    </head>{% endfilter %}
+<head>
+    <style>
+        .your-css-class {
+            color: pink;
+        }
+    </style>
+</head>{% endfilter %}
 </code>
             </pre>
     </main>
