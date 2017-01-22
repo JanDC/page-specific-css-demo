@@ -9,17 +9,19 @@
 </head>
 <body class="u-flex-set">
 {% block content %}{% endblock %}
+{% block js %}
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="/js/prismjs/prism.js"></script>
+    <script src="/js/modules/getTransforms.js"></script>
+    <script src="/js/node_modules/animateplus/animate.js"></script>
+    <script src="/js/modules/parallax.js"></script>
+    <script src="/js/modules/logo-animation.js"></script>
+    <script src="/js/modules/menu-animation.js"></script>
+    <script src="/js/modules/global-animations.js"></script>
+{% endblock js %}
 </body>
-<script
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
-<script src="/js/prismjs/prism.js"></script>
-<script src="/js/node_modules/animateplus/animate.js"></script>
-<script src="/js/modules/parallax.js"></script>
-<script src="/js/modules/logo-animation.js"></script>
-<script src="/js/modules/page-animation.js"></script>
-<script src="/js/modules/menu-animation.js"></script>
-<script src="/js/modules/global-animations.js"></script>
 </html>
 {% endspaceless %}

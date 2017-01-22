@@ -1,7 +1,8 @@
 (function () {
 
-    var logo = document.querySelector(".c-logo");
-    var all = document.querySelectorAll(".c-logo > span");
+    var logo = document.querySelector(".js-animations .c-logo");
+    var all = document.querySelectorAll(".js-animations .c-logo > span");
+    if(!logo) return;
     var offsets = center(logo);
 
     // Center logo

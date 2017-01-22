@@ -12,17 +12,24 @@
   perspective: 400px;
 
   > span{
-    opacity: 0;
     display: inline-block;
-    transform-origin: bottom center;
   }
 
-  &:after{
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height:100%;
-    width:100%;
+  &.intro-animation{
+    > span{
+      opacity: 0;
+      transform-origin: bottom center;
+    }
+
+    &:after{
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height:100%;
+      width:100%;
+    }
   }
+
+
 }

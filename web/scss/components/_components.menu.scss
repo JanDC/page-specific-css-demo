@@ -38,12 +38,17 @@
   z-index: index(alpha);
   top: 0;
   right: 0;
-  transform-origin: top right;
-  transform: rotate(-15deg) translateX(-10%) translateY(-17%);
-  opacity: 0;
 
-  &.is-parallaxing{
-    transition: 1s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+  &.intro-animation{
+    transform-origin: top right;
+    opacity: 0;
+
+    &.is-parallaxing{
+      transition: 1s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+    }
+  }
+  &:not(.intro-animation){
+    transform-origin: top right;
   }
 }
 

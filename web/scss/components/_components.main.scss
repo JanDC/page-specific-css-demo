@@ -4,7 +4,10 @@
  */
 
 .c-main {
-  > *{
-    opacity: 0;
+  flex: 1 1 800px;
+  &.intro-animation{
+    > *{
+      opacity: 0;
+    }
   }
 }
