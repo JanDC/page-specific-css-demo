@@ -50,6 +50,7 @@
   }
   &:not(.intro-animation){
     transform-origin: top right;
+    transform: rotate(15deg) translateX(-20%);
   }
 }
 

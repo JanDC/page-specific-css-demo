@@ -39,7 +39,10 @@ $app->get('/', function () use ($app, $cacheTtl) {
     return Response::create($app['twigwrapper']->render('index.twig'))->setTtl($cacheTtl);
 });
 $app->get('/without', function () use ($app, $cacheTtl) {
-    return Response::create($app['twigwrapper']->render('index-without-critical-css.twig'))->setTtl($cacheTtl);
+    return Response::create($app['twigwrapper']->render('without.twig'))->setTtl($cacheTtl);
+});
+$app->get('/with', function () use ($app, $cacheTtl) {
+    return Response::create($app['twigwrapper']->render('with.twig'))->setTtl($cacheTtl);
 });
 if ($debug) {
     $app->run();

@@ -1,0 +1,19 @@
+{% extends 'base.twig' %}
+
+{% block head %}
+    <script>
+        {% include 'node_modules/fg-loadcss/src/loadCSS.js' %}
+        {% include 'node_modules/fg-loadcss/src/onloadCSS.js' %}
+        var stylesheet = loadCSS( "/css/main.css" );
+        var loaded = false;
+        onloadCSS( stylesheet, function() {
+            loaded = true;
+        });
+    </script>
+    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+{% endblock head %}
+{% block content %}
+    {% fold %}
+    {% include 'includes/homepage.twig' with{animation: false} %}
+    {% endfold %}
+{% endblock content %}

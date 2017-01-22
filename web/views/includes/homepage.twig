@@ -1,6 +1,6 @@
-<div class="[ o-basic-layout ] js-animations">
-    {% include 'includes/sidebar.twig' with{'logoClass': 'intro-animation', 'menuClass': 'intro-animation'} %}
-    <main class="[ c-main ] intro-animation">
+<div class="[ o-basic-layout ] {{ animation?'js-animations':'' }}">
+    {% include 'includes/sidebar.twig' with{'logoClass': animation?'intro-animation':'', 'menuClass': animation?'intro-animation':''} %}
+    <main class="[ c-main ] {{ animation?'intro-animation':'' }}">
         <h2 class="c-page-title">Automatic critical css with twig and PHP.</h2>
         {% include 'includes/sharelinks.twig' %}
         <p>Small php library in combination with a twig extention that allows you to annotate above-the-fold-html in your twig files which will than extract all the necessary CSS.</p>

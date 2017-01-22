@@ -1,0 +1,12 @@
+{% extends 'base.twig' %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/main.css">
+{% endblock head %}
+{% block content %}
+    {% fold %}
+    {% include 'includes/homepage.twig' with{animation: false} %}
+    {% endfold %}
+{% endblock content %}
+
+{% block js %}{% endblock js %}
