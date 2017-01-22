@@ -37,6 +37,6 @@
     "gulp-watch": "4.3.6"
   },
   "scripts": {
-    "postinstall": "cd scss/vendor/ && yarn"
+    "postinstall": "cd scss/vendor/ && yarn && cd ../../js/ && yarn"
   }
 }
