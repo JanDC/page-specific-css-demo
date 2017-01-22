@@ -1,6 +1,5 @@
 var globalAnimations = (function(){
     var all = document.querySelectorAll(".js-animations main > *");
-    console.log(all);
     for (var i = 0, max = all.length; i < max; i++) {
         animate({
             el: all[i],
