@@ -5,11 +5,14 @@
 
 .o-basic-layout {
   display: flex;
-  flex-wrap: wrap;
   padding: 5rem 10rem;
   overflow: hidden;
   position: relative;
   width: 100%;
+
+  @media only screen and (max-width: 800px) {
+    padding: 2rem;
+  }
 
   aside {
     max-height: calc(100vh - 10rem);
@@ -20,6 +23,14 @@
     flex: 0 1 30%;
     padding-right: $global-spacing-unit-large;
 
+    @media only screen and (max-width: 1200px) {
+      min-width: initial;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+
     nav {
       flex: 0 1 1%;
       align-items: flex-end;
@@ -28,5 +39,9 @@
 
   main {
     flex: 0 1 600px;
+
+    @media only screen and (max-width: 800px) {
+      flex: 1;
+    }
   }
 }
