@@ -1,19 +1,11 @@
 {% extends 'base.twig' %}
 
 {% block head %}
-    <script>
-        {% include 'node_modules/fg-loadcss/src/loadCSS.js' %}
-        {% include 'node_modules/fg-loadcss/src/onloadCSS.js' %}
-        var stylesheet = loadCSS( "/css/main.css" );
-        var loaded = false;
-        onloadCSS( stylesheet, function() {
-            loaded = true;
-        });
-    </script>
-    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
 {% endblock head %}
 {% block content %}
     {% fold %}
-    {% include 'includes/homepage.twig' %}
+    {% include 'includes/homepage.twig' with{animation: true} %}
     {% endfold %}
 {% endblock content %}

@@ -3,14 +3,13 @@
 {% block head %}
     <script>
         {% include 'node_modules/fg-loadcss/src/loadCSS.js' %}
-        {% include 'node_modules/fg-loadcss/src/onloadCSS.js' %}
-        var stylesheet = loadCSS( "/css/main.css" );
-        var loaded = false;
-        onloadCSS( stylesheet, function() {
-            loaded = true;
-        });
+        loadCSS( "/css/main.css" );
+        loadCSS( "https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400,400i,600,700,800" );
     </script>
-    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+    </noscript>
 {% endblock head %}
 {% block content %}
     {% fold %}
