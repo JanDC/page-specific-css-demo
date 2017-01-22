@@ -1,7 +1,7 @@
 <aside>
     <header>
         <a href="/">
-            <h1 class="c-logo u-light">
+            <h1 class="c-logo u-light {% if logoClass is defined %}{{ logoClass }}{% endif %}">
                 <span class="u-color-orange-base">automatic</span><br>
                 <span class="u-color-blue-base">critical</span><br>
                 <span><span class="u-color-red-base">css</span> with<br></span><br>
@@ -17,7 +17,7 @@
             <li><a href="#">Download</a></li>
             <li><a class="is-active" href="#">Benchmarks</a></li>
         </ul>#}
-        <div class="[ c-menu-bg ] {% if menuClass is defined %}intro-animation{% endif %} u-bgcolor-purple-base js-menu-parallax js-parallax" data-parallax-rotate="20"></div>
+        <div class="[ c-menu-bg ] {% if menuClass is defined %}{{ menuClass }}{% endif %} js-menu-parallax js-parallax" data-parallax-rotate="20"></div>
     </nav>
 
 </aside>

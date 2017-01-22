@@ -1,0 +1,34 @@
+<div class="[ o-basic-layout ] js-animations">
+    {% include 'includes/sidebar.twig' with{'logoClass': 'intro-animation', 'menuClass': 'intro-animation'} %}
+    <main class="[ c-main ] intro-animation">
+        <h2 class="c-page-title">Automatic critical css with twig and PHP.</h2>
+        {% include 'includes/sharelinks.twig' %}
+        <p>Small php library in combination with a twig extention that allows you to annotate above-the-fold-html in your twig files which will than extract all the necessary CSS.</p>
+        <p>In combination with loadCSS you can setup a page-specific critcal CSS solution quite easy.</p>
+        <br>
+        <h3>Live demo</h3>
+        <p>Take a look at the page source to see Page specific css in action.</p>
+        <p>We ran a test <a href="#">with</a> and <a href="#">without</a> it on <a href="http://webpagetest.org">webpagetest.org</a> so you can see the difference in metrics.</p>
+        <br>
+        <h3 id="install">Install</h3>
+        <pre><code class="language-bash">composer install page-specific-css</code></pre>
+        <br>
+        <h3 id="usage">Usage</h3>
+<pre class="u-margin-bottom-none">
+<code class="language-twig">{% filter e %}
+        {{ '{% fold %}' }}
+        <button class=”your-css-class”>Button</button>
+        {{ '{% endfold %}' }}{% endfilter %}</code></pre>
+<pre class="u-margin-top-none">
+<code class="language-markup">{% filter e('html') %}<!-- output -->
+    <head>
+        <style>
+            .your-css-class {
+                color: pink;
+            }
+        </style>
+    </head>{% endfilter %}
+</code>
+            </pre>
+    </main>
+</div>

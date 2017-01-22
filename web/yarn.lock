@@ -1076,6 +1076,10 @@ fd-slicer@~1.0.1:
   dependencies:
     pend "~1.2.0"
 
+fg-loadcss@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/fg-loadcss/-/fg-loadcss-1.2.1.tgz#12659acce685994799e38e1d7bf71e91f66ac49c"
+
 filename-regex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/filename-regex/-/filename-regex-2.0.0.tgz#996e3e80479b98b9897f15a8a58b3d084e926775"

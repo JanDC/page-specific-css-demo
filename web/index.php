@@ -38,6 +38,9 @@ $app['debug'] = $debug;
 $app->get('/', function () use ($app, $cacheTtl) {
     return Response::create($app['twigwrapper']->render('index.twig'))->setTtl($cacheTtl);
 });
+$app->get('/without', function () use ($app, $cacheTtl) {
+    return Response::create($app['twigwrapper']->render('index-without-critical-css.twig'))->setTtl($cacheTtl);
+});
 if ($debug) {
     $app->run();
 }

@@ -2,10 +2,8 @@
 {% spaceless %}
 <html>
 <head>
-    <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    {% block head %}{% endblock head %}
 </head>
 <body class="u-flex-set">
 {% block content %}{% endblock %}
