@@ -2,6 +2,7 @@
 .vagrant
 node_modules
 vendor
+cache
 !web/scss/vendor
 # sourceMap files
 *.map
