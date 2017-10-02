@@ -13,7 +13,7 @@ $loader = include __DIR__ . '/../vendor/autoload.php';
 $app = new Application();
 
 $debug = false;
-$cacheTtl = 3600;
+$cacheTtl = 24 * 3600;
 
 $app->register(new TwigServiceProvider(), [
     'twig.path' => [__DIR__ . '/views', __DIR__],
