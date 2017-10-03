@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "41ccc440046346c8e7b2e1712c65d12b",
+    "content-hash": "59bff5bc883f0147bc1c6ce815d10834",
     "packages": [
         {
             "name": "jandc/critical-css-processor",
-            "version": "0.2.2",
+            "version": "0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/critical-css-processor.git",
-                "reference": "2731dc73e1f69e28b3876be8f682613d837e95be"
+                "reference": "6ec3c88be45f918ad761c77daf720021fb26a05e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/critical-css-processor/zipball/2731dc73e1f69e28b3876be8f682613d837e95be",
-                "reference": "2731dc73e1f69e28b3876be8f682613d837e95be",
+                "url": "https://api.github.com/repos/JanDC/critical-css-processor/zipball/6ec3c88be45f918ad761c77daf720021fb26a05e",
+                "reference": "6ec3c88be45f918ad761c77daf720021fb26a05e",
                 "shasum": ""
             },
             "require": {
-                "jandc/page-specific-css": "^0.2",
+                "jandc/page-specific-css": "^0.3",
                 "jandc/twig-wrapper": "^0.2"
             },
             "type": "library",
@@ -41,20 +41,20 @@
                 }
             ],
             "description": "Twig postprocessor class which uses the the page-specific-css library to inject the document's head with css",
-            "time": "2017-01-22T11:46:28+00:00"
+            "time": "2017-10-03T07:25:33+00:00"
         },
         {
             "name": "jandc/page-specific-css",
-            "version": "0.2.2",
+            "version": "0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/page-specific-css.git",
-                "reference": "b0a6f259c81da3cfb872dbacfe8fee8f0ca433d7"
+                "reference": "b09f288efea04a5952a7fddfafcd8956484ef1dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/page-specific-css/zipball/b0a6f259c81da3cfb872dbacfe8fee8f0ca433d7",
-                "reference": "b0a6f259c81da3cfb872dbacfe8fee8f0ca433d7",
+                "url": "https://api.github.com/repos/JanDC/page-specific-css/zipball/b09f288efea04a5952a7fddfafcd8956484ef1dd",
+                "reference": "b09f288efea04a5952a7fddfafcd8956484ef1dd",
                 "shasum": ""
             },
             "require": {
@@ -81,25 +81,25 @@
             ],
             "description": "Php library which determines critical css on a per page basis.",
             "homepage": "https://github.com/JanDC/page-specific-css",
-            "time": "2017-01-26T08:55:06+00:00"
+            "time": "2017-10-02T17:36:00+00:00"
         },
         {
             "name": "jandc/page-specific-css-silex",
-            "version": "0.2",
+            "version": "0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/page-specific-css-silex.git",
-                "reference": "fe764d42d1c35fc5fec241f2acc5813c6e332fab"
+                "reference": "a6b1a3a193eea06193c02a75ead321a7a2bb90dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/page-specific-css-silex/zipball/fe764d42d1c35fc5fec241f2acc5813c6e332fab",
-                "reference": "fe764d42d1c35fc5fec241f2acc5813c6e332fab",
+                "url": "https://api.github.com/repos/JanDC/page-specific-css-silex/zipball/a6b1a3a193eea06193c02a75ead321a7a2bb90dd",
+                "reference": "a6b1a3a193eea06193c02a75ead321a7a2bb90dd",
                 "shasum": ""
             },
             "require": {
-                "jandc/critical-css-processor": "^0.2",
-                "jandc/page-specific-css": "^0.2",
+                "jandc/critical-css-processor": "^0.3",
+                "jandc/page-specific-css": "^0.3",
                 "jandc/twig-wrapper-provider": "^0.2",
                 "silex/silex": "^1.2"
             },
@@ -111,7 +111,7 @@
                     "email": "jandecavele@gmail.com"
                 }
             ],
-            "time": "2017-01-21T16:53:05+00:00"
+            "time": "2017-10-03T07:27:40+00:00"
         },
         {
             "name": "jandc/twig-wrapper",

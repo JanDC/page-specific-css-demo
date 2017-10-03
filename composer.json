@@ -3,7 +3,7 @@
     "type": "website",
     "require": {
         "silex/silex": "1.2",
-        "jandc/page-specific-css-silex": "^0.2"
+        "jandc/page-specific-css-silex": "^0.3"
     },
     "authors": [
         {
