@@ -19,7 +19,9 @@ html {
   line-height: $global-line-height / $global-font-size; /* [1] */
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
-  font-family: $primary-font-family;
+  &.font-has-loaded{
+    font-family: $primary-font-family;
+  }
   color: palette(color-base, base);
 }
 
