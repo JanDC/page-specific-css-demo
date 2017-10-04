@@ -93,6 +93,11 @@ module.exports = {
      */
     browsersync: {
         proxy: domain,
-        notify: false
+        notify: false,
+        ghostMode: {
+            clicks: false,
+            forms: false,
+            scroll: false
+        }
     }
 };
