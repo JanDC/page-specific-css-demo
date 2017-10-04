@@ -45,16 +45,16 @@
         },
         {
             "name": "jandc/page-specific-css",
-            "version": "0.3",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/page-specific-css.git",
-                "reference": "b09f288efea04a5952a7fddfafcd8956484ef1dd"
+                "reference": "29e8b7e64666d9cac9c5b2cca67c5bbcef8fb2f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/page-specific-css/zipball/b09f288efea04a5952a7fddfafcd8956484ef1dd",
-                "reference": "b09f288efea04a5952a7fddfafcd8956484ef1dd",
+                "url": "https://api.github.com/repos/JanDC/page-specific-css/zipball/29e8b7e64666d9cac9c5b2cca67c5bbcef8fb2f6",
+                "reference": "29e8b7e64666d9cac9c5b2cca67c5bbcef8fb2f6",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
             ],
             "description": "Php library which determines critical css on a per page basis.",
             "homepage": "https://github.com/JanDC/page-specific-css",
-            "time": "2017-10-02T17:36:00+00:00"
+            "time": "2017-10-04T11:59:56+00:00"
         },
         {
             "name": "jandc/page-specific-css-silex",
