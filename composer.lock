@@ -46,22 +46,22 @@
         },
         {
             "name": "jandc/css-from-html-extractor",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/css-from-html-extractor.git",
-                "reference": "9e1c5762dc4ceffeda08024716a3dbc6d45931b4"
+                "reference": "2c662ef7683113ffc703ecf40245880596466c38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/css-from-html-extractor/zipball/9e1c5762dc4ceffeda08024716a3dbc6d45931b4",
-                "reference": "9e1c5762dc4ceffeda08024716a3dbc6d45931b4",
+                "url": "https://api.github.com/repos/JanDC/css-from-html-extractor/zipball/2c662ef7683113ffc703ecf40245880596466c38",
+                "reference": "2c662ef7683113ffc703ecf40245880596466c38",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.5 || ^7",
                 "symfony/css-selector": "^2.7|~3.0",
-                "twig/twig": "^1.26"
+                "twig/twig": "^1.0|^2.0"
             },
             "type": "library",
             "autoload": {
@@ -82,7 +82,7 @@
             ],
             "description": "Php library which determines which css is used from html snippets.",
             "homepage": "https://github.com/JanDC/css-from-html-extractor",
-            "time": "2017-10-20 11:18:32"
+            "time": "2017-10-20 14:18:38"
         },
         {
             "name": "jandc/twig-wrapper",
@@ -635,6 +635,65 @@
             "time": "2015-05-26 23:43:20"
         },
         {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2017-10-11 12:05:26"
+        },
+        {
             "name": "symfony/routing",
             "version": "v2.5.12",
             "target-dir": "Symfony/Component/Routing",
@@ -704,20 +763,21 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.35.0",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f"
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/daa657073e55b0a78cce8fdd22682fddecc6385f",
-                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^7.0",
+                "symfony/polyfill-mbstring": "~1.0"
             },
             "require-dev": {
                 "psr/container": "^1.0",
@@ -727,7 +787,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.35-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -765,7 +825,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27 18:06:46"
+            "time": "2017-09-27 18:10:31"
         }
     ],
     "packages-dev": [],

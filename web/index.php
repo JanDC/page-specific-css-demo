@@ -35,14 +35,14 @@ $app->extend('twig', function (Twig_Environment $twig, $app) {
 
 $app['debug'] = $debug;
 
-$app->get('/', function () use ($twigWrapper, $cacheTtl) {
-    return Response::create($twigWrapper->render('index.twig'))->setTtl($cacheTtl);
+$app->get('/', function () use ($app, $cacheTtl) {
+    return Response::create($app['twigwrapper']->render('index.twig'))->setTtl($cacheTtl);
 });
-$app->get('/without', function () use ($twigWrapper, $cacheTtl) {
-    return Response::create($twigWrapper->render('without.twig'))->setTtl($cacheTtl);
+$app->get('/without', function () use ($app, $cacheTtl) {
+    return Response::create($app['twigwrapper']->render('without.twig'))->setTtl($cacheTtl);
 });
-$app->get('/with', function () use ($twigWrapper, $cacheTtl) {
-    return Response::create($twigWrapper->render('with.twig'))->setTtl($cacheTtl);
+$app->get('/with', function () use ($app, $cacheTtl) {
+    return Response::create($app['twigwrapper']->render('with.twig'))->setTtl($cacheTtl);
 });
 
 if ($debug) {
