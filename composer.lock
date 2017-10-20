@@ -4,25 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "59bff5bc883f0147bc1c6ce815d10834",
+    "hash": "95eed148b0a814c6c85c6b684a321646",
+    "content-hash": "3cb37aaa786152c01e1a2712f6f3d01a",
     "packages": [
         {
-            "name": "jandc/critical-css-processor",
-            "version": "0.3",
+            "name": "jandc/critical-css",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/JanDC/critical-css-processor.git",
-                "reference": "6ec3c88be45f918ad761c77daf720021fb26a05e"
+                "url": "https://github.com/JanDC/critical-css.git",
+                "reference": "84469695271abe692fcc073a250da187f632db99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/critical-css-processor/zipball/6ec3c88be45f918ad761c77daf720021fb26a05e",
-                "reference": "6ec3c88be45f918ad761c77daf720021fb26a05e",
+                "url": "https://api.github.com/repos/JanDC/critical-css/zipball/84469695271abe692fcc073a250da187f632db99",
+                "reference": "84469695271abe692fcc073a250da187f632db99",
                 "shasum": ""
             },
             "require": {
-                "jandc/page-specific-css": "^0.3",
-                "jandc/twig-wrapper": "^0.2"
+                "jandc/css-from-html-extractor": "^1.0",
+                "jandc/twig-wrapper": "^0.3"
             },
             "type": "library",
             "autoload": {
@@ -40,21 +41,21 @@
                     "email": "jandecavele@gmail.com"
                 }
             ],
-            "description": "Twig postprocessor class which uses the the page-specific-css library to inject the document's head with css",
-            "time": "2017-10-03T07:25:33+00:00"
+            "description": "Package wrapper and twig postprocessor class which uses the 'css from html' library and twigwrapper to inject a document's head with critical css",
+            "time": "2017-10-20 12:01:27"
         },
         {
-            "name": "jandc/page-specific-css",
-            "version": "0.3.2",
+            "name": "jandc/css-from-html-extractor",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/JanDC/page-specific-css.git",
-                "reference": "523af0347f30f20e73180d3b67c7ee8e832d9d11"
+                "url": "https://github.com/JanDC/css-from-html-extractor.git",
+                "reference": "9e1c5762dc4ceffeda08024716a3dbc6d45931b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/page-specific-css/zipball/523af0347f30f20e73180d3b67c7ee8e832d9d11",
-                "reference": "523af0347f30f20e73180d3b67c7ee8e832d9d11",
+                "url": "https://api.github.com/repos/JanDC/css-from-html-extractor/zipball/9e1c5762dc4ceffeda08024716a3dbc6d45931b4",
+                "reference": "9e1c5762dc4ceffeda08024716a3dbc6d45931b4",
                 "shasum": ""
             },
             "require": {
@@ -65,7 +66,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "PageSpecificCss\\": "src/"
+                    "CSSFromHTMLExtractor\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -79,56 +80,26 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Php library which determines critical css on a per page basis.",
-            "homepage": "https://github.com/JanDC/page-specific-css",
-            "time": "2017-10-04T21:30:04+00:00"
-        },
-        {
-            "name": "jandc/page-specific-css-silex",
-            "version": "0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JanDC/page-specific-css-silex.git",
-                "reference": "a6b1a3a193eea06193c02a75ead321a7a2bb90dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/page-specific-css-silex/zipball/a6b1a3a193eea06193c02a75ead321a7a2bb90dd",
-                "reference": "a6b1a3a193eea06193c02a75ead321a7a2bb90dd",
-                "shasum": ""
-            },
-            "require": {
-                "jandc/critical-css-processor": "^0.3",
-                "jandc/page-specific-css": "^0.3",
-                "jandc/twig-wrapper-provider": "^0.2",
-                "silex/silex": "^1.2"
-            },
-            "type": "package",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Jan Decavele",
-                    "email": "jandecavele@gmail.com"
-                }
-            ],
-            "time": "2017-10-03T07:27:40+00:00"
+            "description": "Php library which determines which css is used from html snippets.",
+            "homepage": "https://github.com/JanDC/css-from-html-extractor",
+            "time": "2017-10-20 11:18:32"
         },
         {
             "name": "jandc/twig-wrapper",
-            "version": "0.2",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/twig-wrapper.git",
-                "reference": "0209c383bc54ea334b915f10f88de97d4c1a33c2"
+                "reference": "0b27dcaad4ac04cff3eab2320ab270a8c0eb8d87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/twig-wrapper/zipball/0209c383bc54ea334b915f10f88de97d4c1a33c2",
-                "reference": "0209c383bc54ea334b915f10f88de97d4c1a33c2",
+                "url": "https://api.github.com/repos/JanDC/twig-wrapper/zipball/0b27dcaad4ac04cff3eab2320ab270a8c0eb8d87",
+                "reference": "0b27dcaad4ac04cff3eab2320ab270a8c0eb8d87",
                 "shasum": ""
             },
             "require": {
-                "twig/twig": "^1.26"
+                "twig/twig": "^1|^2"
             },
             "type": "library",
             "autoload": {
@@ -149,24 +120,24 @@
             ],
             "description": "Service which applies post processing to rendered twig templates.",
             "homepage": "https://github.com/JanDC/twig-wrapper",
-            "time": "2017-01-21T21:06:35+00:00"
+            "time": "2017-01-21 21:30:01"
         },
         {
             "name": "jandc/twig-wrapper-provider",
-            "version": "0.2.2",
+            "version": "0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/twig-wrapper-provider.git",
-                "reference": "6c01ae3dae66f9f0389788e872a7bf9b5bc0ee85"
+                "reference": "b32c9089fb0bddef0ee9e447af243f6f05fd97b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/twig-wrapper-provider/zipball/6c01ae3dae66f9f0389788e872a7bf9b5bc0ee85",
-                "reference": "6c01ae3dae66f9f0389788e872a7bf9b5bc0ee85",
+                "url": "https://api.github.com/repos/JanDC/twig-wrapper-provider/zipball/b32c9089fb0bddef0ee9e447af243f6f05fd97b2",
+                "reference": "b32c9089fb0bddef0ee9e447af243f6f05fd97b2",
                 "shasum": ""
             },
             "require": {
-                "jandc/twig-wrapper": "^0.2",
+                "jandc/twig-wrapper": "^0.3",
                 "silex/silex": ">=1.2,<2.0"
             },
             "type": "library",
@@ -188,20 +159,20 @@
             ],
             "description": "Silex provider which wraps twig rendering and allows for post processing",
             "homepage": "https://github.com/JanDC/twig-wrapper-provider",
-            "time": "2017-01-21T21:09:41+00:00"
+            "time": "2017-01-21 21:54:26"
         },
         {
             "name": "pimple/pimple",
-            "version": "1.1.x-dev",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "cae373ff3d87f8763fe78557312ec7f47f5c745c"
+                "reference": "2019c145fe393923f3441b23f29bbdfaa5c58c4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/cae373ff3d87f8763fe78557312ec7f47f5c745c",
-                "reference": "cae373ff3d87f8763fe78557312ec7f47f5c745c",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/2019c145fe393923f3441b23f29bbdfaa5c58c4d",
+                "reference": "2019c145fe393923f3441b23f29bbdfaa5c58c4d",
                 "shasum": ""
             },
             "require": {
@@ -234,11 +205,11 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2016-09-10T19:35:52+00:00"
+            "time": "2013-11-22 08:30:29"
         },
         {
             "name": "psr/log",
-            "version": "dev-master",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
@@ -281,7 +252,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "silex/silex",
@@ -367,20 +338,20 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2014-03-29T14:15:59+00:00"
+            "time": "2014-03-29 14:15:59"
         },
         {
             "name": "symfony/css-selector",
-            "version": "3.4.x-dev",
+            "version": "v3.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "f38b363faac4d647f53ef389203436e6c3b27f01"
+                "reference": "07447650225ca9223bd5c97180fe7c8267f7d332"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/f38b363faac4d647f53ef389203436e6c3b27f01",
-                "reference": "f38b363faac4d647f53ef389203436e6c3b27f01",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/07447650225ca9223bd5c97180fe7c8267f7d332",
+                "reference": "07447650225ca9223bd5c97180fe7c8267f7d332",
                 "shasum": ""
             },
             "require": {
@@ -389,7 +360,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -420,11 +391,11 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-02T06:49:52+00:00"
+            "time": "2017-10-02 06:42:24"
         },
         {
             "name": "symfony/debug",
-            "version": "2.8.x-dev",
+            "version": "v2.8.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -477,11 +448,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-01T21:00:16+00:00"
+            "time": "2017-10-01 21:00:16"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "2.5.x-dev",
+            "version": "v2.5.12",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
@@ -534,11 +505,11 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-29T18:20:43+00:00"
+            "time": "2015-01-29 18:20:43"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "2.5.x-dev",
+            "version": "v2.5.12",
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
@@ -587,11 +558,11 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2015-04-01T15:49:36+00:00"
+            "time": "2015-04-01 15:49:36"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "2.5.x-dev",
+            "version": "v2.5.12",
             "target-dir": "Symfony/Component/HttpKernel",
             "source": {
                 "type": "git",
@@ -661,20 +632,20 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2015-05-26T23:43:20+00:00"
+            "time": "2015-05-26 23:43:20"
         },
         {
             "name": "symfony/routing",
-            "version": "2.5.x-dev",
+            "version": "v2.5.12",
             "target-dir": "Symfony/Component/Routing",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Routing.git",
+                "url": "https://github.com/symfony/routing.git",
                 "reference": "46142c34ea830f47429df6e15faec3a33292d618"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/46142c34ea830f47429df6e15faec3a33292d618",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/46142c34ea830f47429df6e15faec3a33292d618",
                 "reference": "46142c34ea830f47429df6e15faec3a33292d618",
                 "shasum": ""
             },
@@ -729,20 +700,20 @@
                 "uri",
                 "url"
             ],
-            "time": "2015-02-08T07:07:45+00:00"
+            "time": "2015-02-08 07:07:45"
         },
         {
             "name": "twig/twig",
-            "version": "1.x-dev",
+            "version": "v1.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e7944a1f67499a230463f463d7cecc3336b87ea1"
+                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e7944a1f67499a230463f463d7cecc3336b87ea1",
-                "reference": "e7944a1f67499a230463f463d7cecc3336b87ea1",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/daa657073e55b0a78cce8fdd22682fddecc6385f",
+                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f",
                 "shasum": ""
             },
             "require": {
@@ -794,12 +765,12 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27T18:07:18+00:00"
+            "time": "2017-09-27 18:06:46"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,

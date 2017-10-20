@@ -1,7 +1,7 @@
 <?php
 
 use CriticalCssProcessor\CriticalCssProcessor;
-use PageSpecificCss\Twig\Extension;
+use CSSFromHTMLExtractor\Twig\Extension;
 use Silex\Application;
 use Silex\Provider\HttpCacheServiceProvider;
 use Silex\Provider\TwigServiceProvider;
@@ -12,7 +12,7 @@ $loader = include __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
 
-$debug = false;
+$debug = true;
 $cacheTtl = 24 * 3600;
 
 $app->register(new TwigServiceProvider(), [
@@ -35,16 +35,18 @@ $app->extend('twig', function (Twig_Environment $twig, $app) {
 
 $app['debug'] = $debug;
 
-$app->get('/', function () use ($app, $cacheTtl) {
-    return Response::create($app['twigwrapper']->render('index.twig'))->setTtl($cacheTtl);
+$app->get('/', function () use ($twigWrapper, $cacheTtl) {
+    return Response::create($twigWrapper->render('index.twig'))->setTtl($cacheTtl);
 });
-$app->get('/without', function () use ($app, $cacheTtl) {
-    return Response::create($app['twigwrapper']->render('without.twig'))->setTtl($cacheTtl);
+$app->get('/without', function () use ($twigWrapper, $cacheTtl) {
+    return Response::create($twigWrapper->render('without.twig'))->setTtl($cacheTtl);
 });
-$app->get('/with', function () use ($app, $cacheTtl) {
-    return Response::create($app['twigwrapper']->render('with.twig'))->setTtl($cacheTtl);
+$app->get('/with', function () use ($twigWrapper, $cacheTtl) {
+    return Response::create($twigWrapper->render('with.twig'))->setTtl($cacheTtl);
 });
+
 if ($debug) {
     $app->run();
 }
+
 $app['http_cache']->run();
