@@ -27,7 +27,7 @@
         opacity: [0, 1],
         easing: "easeInOutQuint",
         complete(){
-            $('.js-parallax').simpleParallax();
+            $('.js-parallax').removeClass('intro-animation').simpleParallax();
         }
     });
 
