@@ -47,6 +47,7 @@ $app->get('/with', function () use ($app, $cacheTtl) {
 
 if ($debug) {
     $app->run();
+}else{
+    $app['http_cache']->run();
 }
 
-$app['http_cache']->run();
