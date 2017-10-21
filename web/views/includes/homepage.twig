@@ -2,7 +2,14 @@
     {% include 'includes/sidebar.twig' with{'logoClass': animation?'intro-animation':'', 'menuClass': animation?'intro-animation':''} %}
     <main class="[ c-main ] {{ animation?'intro-animation':'' }}">
         <h2 class="c-page-title">Automatic critical css with Twig and PHP.</h2>
-        {% include 'includes/sharelinks.twig' %}
+        <div class="u-flex-set u-flex--align-items-center u-margin-bottom">
+            {% include 'includes/sharelinks.twig' %}
+            <div class="c-authors">
+                <span>Made by</span>
+                <a class="c-author" href="https://twitter.com/EpochDC">Jan Decavele</a>
+                <a class="c-author" href="https://twitter.com/GijsRoge">Gijs Rogé</a>
+            </div>
+        </div>
         <p>Small php library in combination with a twig extention that allows you to annotate above-the-fold-html in your twig files which will than extract all the necessary CSS.</p>
         <p>In combination with loadCSS you can setup a critcal CSS solution quite easy.</p>
 
