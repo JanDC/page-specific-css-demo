@@ -1,7 +1,7 @@
 {% extends 'base.twig' %}
 
 {% block head %}
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?t={{ 'now'|date('U') }}">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
 {% endblock head %}
 {% block content %}
