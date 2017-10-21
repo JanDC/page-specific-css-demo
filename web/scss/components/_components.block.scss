@@ -1,0 +1,33 @@
+/*
+ *  Components: Blocks
+ *  ---
+ */
+
+.c-block {
+  padding: $global-spacing-unit;
+  margin-bottom: $global-spacing-unit;
+
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.c-block--highlight {
+  padding: $global-spacing-unit-medium;
+  background-color: $color-purple;
+  background: linear-gradient(to right, palette(color-purple, base), palette(color-red, light));
+  color: white;
+  border-radius: 5px;
+
+  h2,h3{
+    color: white;
+    background: transparent;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+  }
+}

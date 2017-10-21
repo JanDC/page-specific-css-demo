@@ -1,26 +1,29 @@
 <div class="[ o-basic-layout ] {{ animation?'js-animations':'' }}">
     {% include 'includes/sidebar.twig' with{'logoClass': animation?'intro-animation':'', 'menuClass': animation?'intro-animation':''} %}
     <main class="[ c-main ] {{ animation?'intro-animation':'' }}">
-        <h2 class="c-page-title">Automatic critical css with twig and PHP.</h2>
+        <h2 class="c-page-title">Automatic critical css with Twig and PHP.</h2>
         {% include 'includes/sharelinks.twig' %}
         <p>Small php library in combination with a twig extention that allows you to annotate above-the-fold-html in your twig files which will than extract all the necessary CSS.</p>
         <p>In combination with loadCSS you can setup a critcal CSS solution quite easy.</p>
 
         <h3>Key features</h3>
-        <ul>
+        <ul class="c-checklist">
             <li>PHP only, no Node.js required.</li>
             <li>Automatically generated for each page</li>
             <li>Manual control through <code class="language-twig">{{ '{% fold %}{% endfold %}' }}</code> tags</li>
             <li>Dynamically resolves CSS used on each page</li>
         </ul>
-        
+
         <h3>Documentation & Installation</h3>
-        <p><a rel="noopener" target="_blank" href="https://github.com/JanDC/critical-css">Github</a> or <a rel="noopener" target="_blank" href="https://packagist.org/packages/jandc/critical-css">Packagist</a></p>
+        <div class="c-block c-block--highlight">
+            <div class="u-text-align-center"><a class="c-button c-button--transparent" rel="noopener" target="_blank" href="https://github.com/JanDC/critical-css">Github</a> or <a class="c-button c-button--transparent" rel="noopener" target="_blank" href="https://packagist
+            .org/packages/jandc/critical-css">Packagist</a></div>
+        </div>
 
         <h3>Demo</h3>
         <p>
-            <a rel="noopener" target="_blank" href="/with">/with</a> – <a rel="noopener" target="_blank" title="Benchmark with critical CSS enabled on a slow 3G connection" href="https://www.webpagetest.org/result/171021_SB_2b475c119a4e5000c88dabea8a37dac3/">benchmark <em>*</em></a> – <em>critical CSS enabled</em><br>
-            <a rel="noopener" target="_blank" href="/without">/without</a> – <a rel="noopener" target="_blank" title="Benchmark with critical CSS enabled on a slow 3G connection" href="https://www.webpagetest.org/result/171021_V7_440ec64c9313718fb0a6290d44115ecd/">benchmark <em>*</em></a> – <em>critical CSS <b>not</b>
+            <a href="/with">/with</a> – <a rel="noopener" target="_blank" title="Benchmark with critical CSS enabled on a slow 3G connection" href="https://www.webpagetest.org/result/171021_SB_2b475c119a4e5000c88dabea8a37dac3/">benchmark <em>*</em></a> – <em>critical CSS enabled</em><br>
+            <a href="/without">/without</a> – <a rel="noopener" target="_blank" title="Benchmark with critical CSS enabled on a slow 3G connection" href="https://www.webpagetest.org/result/171021_V7_440ec64c9313718fb0a6290d44115ecd/">benchmark <em>*</em></a> – <em>critical CSS <b>not</b>
                 enabled</em>
         </p>
         <p>Take a look at these page sources to see the critical CSS in action.</p>

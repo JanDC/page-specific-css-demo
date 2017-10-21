@@ -7,3 +7,7 @@
 {% block content %}
     {% include 'includes/homepage.twig' with{animation: false} %}
 {% endblock content %}
+{% block js %}
+    {{ parent() }}
+    <script>$('.js-parallax').simpleParallax();</script>
+{% endblock %}

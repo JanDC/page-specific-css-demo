@@ -5,9 +5,9 @@
 
 p{
   a{
-    box-shadow: 0 0 20px 2px rgba(black, .1), 0 0 6px 1px rgba(black, .05);
-    background-color: white;
-    color: $color-purple;
+    box-shadow: 0 0 20px 2px rgba(black, .05), 0 0 6px 1px rgba(black, .025);
+    background-color: rgba(white, 1);
+    color: lighten($color-purple, 10%);
     padding: 1px 5px;
     text-decoration: none;
     border-radius: 3px;

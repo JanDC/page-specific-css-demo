@@ -1,0 +1,20 @@
+/*
+ *  Components: Checklist
+ *  ---
+ */
+
+.c-checklist {
+  list-style: none;
+
+  li {
+    position: relative;
+    &:before {
+      left: -$global-spacing-unit;
+      position: absolute;
+      content: '✓';
+      font-weight: $bold;
+      margin-right: $global-spacing-unit;
+      color: $color-purple;
+    }
+  }
+}
