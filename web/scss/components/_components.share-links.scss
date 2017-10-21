@@ -4,6 +4,7 @@
  */
 
 .c-share-links {
+  margin-bottom: $global-spacing-unit;
   > *{
     &:not(:last-child){
       margin-right: $global-spacing-unit-tiny;

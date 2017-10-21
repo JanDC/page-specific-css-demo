@@ -39,16 +39,25 @@ gulp.task("lint-styles", function () {
     ], {syntax: syntax}));
 });
 
-gulp.task('scss', ["lint-styles"], function () {
-  gulp.src(config.scss.src)
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sass.sync(config.scss.settings)
-      .pipe(sass())
-      .on('error', sass.logError))
-    .pipe(postcss(processors, {syntax: syntax}))
-    .pipe(cssnano({autoprefixer: false}))
-    .pipe(sourcemaps.write('.'))
-    .pipe(browserSync.stream({match: '**/*.css'}))
-    .pipe(gulp.dest(config.scss.dest))
+gulp.task('scss', function () {
+    gulp.src(config.scss.src)
+        .pipe(plumber())
+        .pipe(sass.sync(config.scss.settings)
+            .pipe(sass())
+            .on('error', sass.logError))
+        .pipe(postcss(processors, {syntax: syntax}))
+        .pipe(browserSync.stream({match: '**/*.css'}))
+        .pipe(gulp.dest(config.scss.dest))
+});
+
+gulp.task('scss-build', ["lint-styles"], function () {
+    gulp.src(config.scss.src)
+        .pipe(plumber())
+        .pipe(sass.sync(config.scss.settings)
+            .pipe(sass())
+            .on('error', sass.logError))
+        .pipe(postcss(processors, {syntax: syntax}))
+        .pipe(cssnano({autoprefixer: false}))
+        .pipe(browserSync.stream({match: '**/*.css'}))
+        .pipe(gulp.dest(config.scss.dest))
 });

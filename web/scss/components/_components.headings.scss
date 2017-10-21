@@ -3,11 +3,12 @@
  *  ---
  */
 
-.c-page-title{
+.c-page-title {
+  margin-top: 0;
   color: palette(color-purple, base);
   background: linear-gradient(to right, palette(color-purple, base), palette(color-red, light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: $light;
-  margin-bottom: $global-spacing-unit-medium;
+  margin-bottom: $global-spacing-unit;
 }

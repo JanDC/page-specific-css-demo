@@ -4,17 +4,26 @@
         <h2 class="c-page-title">Automatic critical css with twig and PHP.</h2>
         {% include 'includes/sharelinks.twig' %}
         <p>Small php library in combination with a twig extention that allows you to annotate above-the-fold-html in your twig files which will than extract all the necessary CSS.</p>
-        <p>In combination with loadCSS you can setup a page-specific critcal CSS solution quite easy.</p>
-        <br>
-        <h3>Live demo</h3>
-        <p>Take a look at the page source to see Page specific css in action.</p>
-        <blockquote><p>We ran some tests on a slow 3G mobile connection, where you would get the most benefit from this technique. <a href="https://www.webpagetest.org/result/170122_VJ_RHE/">With</a> and <a href="https://www.webpagetest.org/result/170122_P5_RHH/">without</a> so you can see the difference in metrics.</p></blockquote>
-        <br>
-        <h3 id="install">Install</h3>
-        <pre><code class="language-bash">composer install page-specific-css</code></pre>
-        <br>
+        <p>In combination with loadCSS you can setup a critcal CSS solution quite easy.</p>
+
+        <h3>Key features</h3>
+        <ul>
+            <li>Automatically generated</li>
+            <li>Manual control through <code class="language-twig">{{ '{% fold %}{% endfold %}' }}</code> tags</li>
+            <li>Dynamically resolves CSS used on each page</li>
+        </ul>
+
+        <h3>Demo</h3>
+        <p>
+            <a rel="noopener" target="_blank" href="/with">/with</a> – <a rel="noopener" target="_blank" title="Benchmark with critical CSS enabled on a slow 3G connection" href="https://www.webpagetest.org/result/170122_VJ_RHE/">benchmark <em>*</em></a> – <em>critical CSS enabled</em><br>
+            <a rel="noopener" target="_blank" href="/without">/without</a> – <a rel="noopener" target="_blank" title="Benchmark with critical CSS enabled on a slow 3G connection" href="https://www.webpagetest.org/result/170122_P5_RHH/">benchmark <em>*</em></a> – <em>critical CSS <b>not</b>
+                enabled</em>
+        </p>
+        <p>Take a look at these page sources to see the critical CSS in action.</p>
+        <p><em>*</em> These benchmarks are run on a slow 3G connection. This is where critical CSS is the most important.</p>
+
         <h3 id="usage">Usage</h3>
-<pre class="u-margin-bottom-none">
+        <pre class="u-margin-bottom-none">
 <code class="language-twig">{% filter e %}
 {{ '{% fold %}' }}
     <button class=”your-css-class”>Button</button>

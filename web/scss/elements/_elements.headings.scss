@@ -25,6 +25,11 @@ h3 {
   font-family: $secondary-font-family;
   @include font-size($font-size-h3, 1.5);
   font-weight: $weight;
+
+  color: palette(color-purple, base);
+  background: linear-gradient(to right, palette(color-purple, base), palette(color-red, light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h4 {
@@ -43,4 +48,8 @@ h6 {
   font-family: $secondary-font-family;
   @include font-size($font-size-h6, 1.5);
   font-weight: $weight;
+}
+
+h2,h3{
+  margin-top: $global-spacing-unit-medium;
 }
