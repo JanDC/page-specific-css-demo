@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "95eed148b0a814c6c85c6b684a321646",
-    "content-hash": "3cb37aaa786152c01e1a2712f6f3d01a",
+    "hash": "a99c93fd19d2898e8af7a876d1a604ad",
+    "content-hash": "d8de97a92b596f37bdcb30bd2e708921",
     "packages": [
         {
             "name": "jandc/critical-css",
-            "version": "0.4.3",
+            "version": "0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/critical-css.git",
-                "reference": "d8747d96fc15295d5250adbc7da38b13bed643ad"
+                "reference": "2ee0e8f3d2928f09b5e3d237b242593ecaf69140"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/critical-css/zipball/d8747d96fc15295d5250adbc7da38b13bed643ad",
-                "reference": "d8747d96fc15295d5250adbc7da38b13bed643ad",
+                "url": "https://api.github.com/repos/JanDC/critical-css/zipball/2ee0e8f3d2928f09b5e3d237b242593ecaf69140",
+                "reference": "2ee0e8f3d2928f09b5e3d237b242593ecaf69140",
                 "shasum": ""
             },
             "require": {
@@ -42,20 +42,20 @@
                 }
             ],
             "description": "Package wrapper and twig postprocessor class which uses the 'css from html' library and twigwrapper to inject a document's head with critical css",
-            "time": "2017-10-21 19:58:51"
+            "time": "2017-10-21 20:56:48"
         },
         {
             "name": "jandc/css-from-html-extractor",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/css-from-html-extractor.git",
-                "reference": "73dd8f3678e3b7e2d50f71c56df83d369b681bdc"
+                "reference": "a59dc5b957525401107bc64de2971216ff9940a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/css-from-html-extractor/zipball/73dd8f3678e3b7e2d50f71c56df83d369b681bdc",
-                "reference": "73dd8f3678e3b7e2d50f71c56df83d369b681bdc",
+                "url": "https://api.github.com/repos/JanDC/css-from-html-extractor/zipball/a59dc5b957525401107bc64de2971216ff9940a8",
+                "reference": "a59dc5b957525401107bc64de2971216ff9940a8",
                 "shasum": ""
             },
             "require": {
@@ -82,7 +82,7 @@
             ],
             "description": "Php library which determines which css is used from html snippets.",
             "homepage": "https://github.com/JanDC/css-from-html-extractor",
-            "time": "2017-10-21 19:56:55"
+            "time": "2017-10-21 20:58:19"
         },
         {
             "name": "jandc/twig-wrapper",
