@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "jandc/critical-css",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/critical-css.git",
-                "reference": "e25d2d68c5ba02d2be6f475d342018abe624a083"
+                "reference": "d8747d96fc15295d5250adbc7da38b13bed643ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/critical-css/zipball/e25d2d68c5ba02d2be6f475d342018abe624a083",
-                "reference": "e25d2d68c5ba02d2be6f475d342018abe624a083",
+                "url": "https://api.github.com/repos/JanDC/critical-css/zipball/d8747d96fc15295d5250adbc7da38b13bed643ad",
+                "reference": "d8747d96fc15295d5250adbc7da38b13bed643ad",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
                 }
             ],
             "description": "Package wrapper and twig postprocessor class which uses the 'css from html' library and twigwrapper to inject a document's head with critical css",
-            "time": "2017-10-21 14:43:14"
+            "time": "2017-10-21 19:58:51"
         },
         {
             "name": "jandc/css-from-html-extractor",
