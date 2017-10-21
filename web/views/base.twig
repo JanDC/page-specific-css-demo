@@ -3,7 +3,6 @@
 <html>
 <head>
     <script>{% include 'js/node_modules/fontfaceobserver/fontfaceobserver.standalone.js' %}</script>
-    {% include 'includes/analytics.twig' %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block head %}{% endblock head %}
 </head>
@@ -28,6 +27,7 @@
             document.querySelector('html').classList.add('font-has-loaded');
         });
     </script>
+    {% include 'includes/analytics.twig' %}
 {% endblock js %}
 </body>
 </html>
