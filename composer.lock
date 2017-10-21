@@ -46,16 +46,16 @@
         },
         {
             "name": "jandc/css-from-html-extractor",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanDC/css-from-html-extractor.git",
-                "reference": "2c662ef7683113ffc703ecf40245880596466c38"
+                "reference": "73dd8f3678e3b7e2d50f71c56df83d369b681bdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/css-from-html-extractor/zipball/2c662ef7683113ffc703ecf40245880596466c38",
-                "reference": "2c662ef7683113ffc703ecf40245880596466c38",
+                "url": "https://api.github.com/repos/JanDC/css-from-html-extractor/zipball/73dd8f3678e3b7e2d50f71c56df83d369b681bdc",
+                "reference": "73dd8f3678e3b7e2d50f71c56df83d369b681bdc",
                 "shasum": ""
             },
             "require": {
@@ -82,7 +82,7 @@
             ],
             "description": "Php library which determines which css is used from html snippets.",
             "homepage": "https://github.com/JanDC/css-from-html-extractor",
-            "time": "2017-10-20 14:18:38"
+            "time": "2017-10-21 19:56:55"
         },
         {
             "name": "jandc/twig-wrapper",
