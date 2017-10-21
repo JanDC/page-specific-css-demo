@@ -3,11 +3,11 @@
 {% block head %}
     <script>
         !function(e){"use strict";var n=function(n,t,o){function i(e){if(a.body)return e();setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=f[f.length-1]}var s=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=s.length;t--;)if(s[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
-        loadCSS( "/css/main.css" );
+        loadCSS( "/css/main.css?t={{ 'now'|date('U') }}" );
         loadCSS( "https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400,400i,600,700,800" );
     </script>
     <noscript>
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/main.css?t={{ 'now'|date('U') }}">
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
     </noscript>
 {% endblock head %}
