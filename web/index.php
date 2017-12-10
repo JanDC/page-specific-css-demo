@@ -2,6 +2,7 @@
 
 use CriticalCssProcessor\CriticalCssProcessor;
 use CSSFromHTMLExtractor\Twig\Extension;
+use Doctrine\Common\Cache\FilesystemCache;
 use Silex\Application;
 use Silex\Provider\HttpCacheServiceProvider;
 use Silex\Provider\TwigServiceProvider;
@@ -12,20 +13,21 @@ $loader = include __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
 
-$debug = false;
+$debug = true;
 $cacheTtl = 24 * 3600;
+$cacheDirectory = __DIR__ . '/../cache';
 
 $app->register(new TwigServiceProvider(), [
     'twig.path' => [__DIR__ . '/views', __DIR__],
     'twig.options' => [
         'debug' => $debug,
-        'cache' => __DIR__ . '/../cache/twig_cache'
+        'cache' => $cacheDirectory . '/twig_cache'
     ]
 ]);
 
-$app->register(new HttpCacheServiceProvider(), ['http_cache.cache_dir' => __DIR__ . '/../cache/http_cache']);
+$app->register(new HttpCacheServiceProvider(), ['http_cache.cache_dir' => $cacheDirectory . '/http_cache']);
 
-$app->register(new TwigWrapperProvider('twig', [new CriticalCssProcessor()]));
+$app->register(new TwigWrapperProvider('twig', [new CriticalCssProcessor(new FilesystemCache($cacheDirectory . '/asset_cache'))]));
 
 $app->extend('twig', function (Twig_Environment $twig, $app) {
     $twig->addExtension(new Extension());
@@ -47,7 +49,7 @@ $app->get('/with', function () use ($app, $cacheTtl) {
 
 if ($debug) {
     $app->run();
-}else{
+} else {
     $app['http_cache']->run();
 }
 

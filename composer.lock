@@ -4,24 +4,98 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bf2cab9fcee20e64d73c0cc9c1b9adcb",
     "content-hash": "3050e566f492f81a33a813c61d2e2fe5",
     "packages": [
         {
-            "name": "jandc/critical-css",
-            "version": "0.5.1",
+            "name": "doctrine/cache",
+            "version": "v1.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/JanDC/critical-css.git",
-                "reference": "b40feef1bd5b3d273991de750890829391c82961"
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "b3217d58609e9c8e661cd41357a54d926c4a2a1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanDC/critical-css/zipball/b40feef1bd5b3d273991de750890829391c82961",
-                "reference": "b40feef1bd5b3d273991de750890829391c82961",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/b3217d58609e9c8e661cd41357a54d926c4a2a1a",
+                "reference": "b3217d58609e9c8e661cd41357a54d926c4a2a1a",
                 "shasum": ""
             },
             "require": {
+                "php": "~7.1"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "mongodb/mongodb": "^1.1",
+                "phpunit/phpunit": "^5.7",
+                "predis/predis": "~1.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Caching library offering an object-oriented API for many cache backends",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "cache",
+                "caching"
+            ],
+            "time": "2017-08-25T07:02:50+00:00"
+        },
+        {
+            "name": "jandc/critical-css",
+            "version": "0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanDC/critical-css.git",
+                "reference": "c5dcdc51dcffffa8013893fc135e087035cebbe5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanDC/critical-css/zipball/c5dcdc51dcffffa8013893fc135e087035cebbe5",
+                "reference": "c5dcdc51dcffffa8013893fc135e087035cebbe5",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "^1.7",
                 "jandc/css-from-html-extractor": "^1.0",
                 "jandc/twig-wrapper": "^0.3",
                 "masterminds/html5": "^2.3"
@@ -43,7 +117,7 @@
                 }
             ],
             "description": "Package wrapper and twig postprocessor class which uses the 'css from html' library and twigwrapper to inject a document's head with critical css",
-            "time": "2017-10-22 14:00:54"
+            "time": "2017-12-10T09:17:52+00:00"
         },
         {
             "name": "jandc/css-from-html-extractor",
@@ -83,7 +157,7 @@
             ],
             "description": "Php library which determines which css is used from html snippets.",
             "homepage": "https://github.com/JanDC/css-from-html-extractor",
-            "time": "2017-10-21 20:58:19"
+            "time": "2017-10-21T20:58:19+00:00"
         },
         {
             "name": "jandc/twig-wrapper",
@@ -121,7 +195,7 @@
             ],
             "description": "Service which applies post processing to rendered twig templates.",
             "homepage": "https://github.com/JanDC/twig-wrapper",
-            "time": "2017-01-21 21:30:01"
+            "time": "2017-01-21T21:30:01+00:00"
         },
         {
             "name": "jandc/twig-wrapper-provider",
@@ -160,7 +234,7 @@
             ],
             "description": "Silex provider which wraps twig rendering and allows for post processing",
             "homepage": "https://github.com/JanDC/twig-wrapper-provider",
-            "time": "2017-01-21 21:54:26"
+            "time": "2017-01-21T21:54:26+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -225,7 +299,7 @@
                 "serializer",
                 "xml"
             ],
-            "time": "2017-09-04 12:26:28"
+            "time": "2017-09-04T12:26:28+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -271,7 +345,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2013-11-22 08:30:29"
+            "time": "2013-11-22T08:30:29+00:00"
         },
         {
             "name": "psr/log",
@@ -318,7 +392,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "silex/silex",
@@ -404,7 +478,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2014-03-29 14:15:59"
+            "time": "2014-03-29T14:15:59+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -457,7 +531,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-02 06:42:24"
+            "time": "2017-10-02T06:42:24+00:00"
         },
         {
             "name": "symfony/debug",
@@ -514,7 +588,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-01 21:00:16"
+            "time": "2017-10-01T21:00:16+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -571,7 +645,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-29 18:20:43"
+            "time": "2015-01-29T18:20:43+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -624,7 +698,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2015-04-01 15:49:36"
+            "time": "2015-04-01T15:49:36+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -698,7 +772,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2015-05-26 23:43:20"
+            "time": "2015-05-26T23:43:20+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -757,7 +831,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-10-11 12:05:26"
+            "time": "2017-10-11T12:05:26+00:00"
         },
         {
             "name": "symfony/routing",
@@ -825,7 +899,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2015-02-08 07:07:45"
+            "time": "2015-02-08T07:07:45+00:00"
         },
         {
             "name": "twig/twig",
@@ -891,7 +965,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27 18:10:31"
+            "time": "2017-09-27T18:10:31+00:00"
         }
     ],
     "packages-dev": [],
