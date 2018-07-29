@@ -13,7 +13,7 @@ $loader = include __DIR__.'/../vendor/autoload.php';
 
 $app = new Application();
 
-$debug = true;
+$debug = false;
 $cacheTtl = 24 * 3600;
 $cacheDirectory = __DIR__.'/../cache';
 
